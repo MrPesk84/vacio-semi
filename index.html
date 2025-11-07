@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adrenalina — Deportes de Riesgo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Adrenalina</a>
+      <nav class="nav" id="nav">
+        <a href="#deportes">Deportes</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>Vive la emoción. Disfruta la libertad.</h1>
+          <p>Explora deportes de riesgo: escalada, parapente, mountain bike, surf y más. Diseñado para aventureros que buscan intensidad con estilo.</p>
+          <a class="btn btn-primary" href="#deportes">Descubrir</a>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1502920917128-1aa500764b0b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=4d5b2c6f5eae56a0b05fb1c16eb2b482" alt="Persona en parapente" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="deportes" class="deportes container">
+      <h2 class="section-title">Nuestros deportes</h2>
+      <div class="grid deportes-grid">
+        <article class="card sport-card" data-sport="Parapente">
+          <div class="card-media"></div>
+          <h3>Parapente</h3>
+          <p>Vuela sobre paisajes increíbles y siente la libertad en cada despegue.</p>
+          <a class="btn btn-outline" href="#contacto">Reservar</a>
+        </article>
+
+        <article class="card sport-card" data-sport="Escalada">
+          <div class="card-media"></div>
+          <h3>Escalada</h3>
+          <p>Rutas para todos los niveles: paredes, boulder y vías alpinas.</p>
+          <a class="btn btn-outline" href="#contacto">Reservar</a>
+        </article>
+
+        <article class="card sport-card" data-sport="Mountain Bike">
+          <div class="card-media"></div>
+          <h3>Mountain Bike</h3>
+          <p>Descensos técnicos y rutas enduro por senderos naturales.</p>
+          <a class="btn btn-outline" href="#contacto">Reservar</a>
+        </article>
+
+        <article class="card sport-card" data-sport="Surf">
+          <div class="card-media"></div>
+          <h3>Surf</h3>
+          <p>Clases y salidas guiadas para atrapar la ola perfecta.</p>
+          <a class="btn btn-outline" href="#contacto">Reservar</a>
+        </article>
+
+        <article class="card sport-card" data-sport="Base Jump">
+          <div class="card-media"></div>
+          <h3>Base Jump</h3>
+          <p>Para quienes buscan el máximo subidón; con equipos y seguridad pro.</p>
+          <a class="btn btn-outline" href="#contacto">Reservar</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="galeria" class="galeria container">
+      <h2 class="section-title">Galería</h2>
+      <div class="grid galeria-grid" id="gallery">
+        <!-- Imágenes con modal -->
+        <img class="gal-img" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800&auto=format&fit=crop" alt="Escalada" loading="lazy">
+        <img class="gal-img" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop" alt="Biker" loading="lazy">
+        <img class="gal-img" src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?q=80&w=800&auto=format&fit=crop" alt="Surf" loading="lazy">
+        <img class="gal-img" src="https://images.unsplash.com/photo-1496317556649-f930d733eea2?q=80&w=800&auto=format&fit=crop" alt="Parapente" loading="lazy">
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto container">
+      <h2 class="section-title">Contacto</h2>
+      <form id="contact-form" class="form">
+        <div class="form-row">
+          <input name="name" type="text" placeholder="Nombre" required>
+          <input name="email" type="email" placeholder="Email" required>
+        </div>
+        <textarea name="message" placeholder="¿Qué aventura quieres?" rows="4"></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="button" id="to-top" class="btn btn-ghost">↑ Arriba</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Adrenalina — Deportes de riesgo. Diseñado con ❤️</p>
+    </div>
+  </footer>
+
+  <!-- Modal ligero para la galería -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close" aria-label="Cerrar">✕</button>
+      <img src="" alt="" id="modal-img">
+    </div>
+  </div>
+
+  <script src="move.js" defer></script>
+</body>
+</html>
